@@ -346,7 +346,7 @@ function validation($data)
 		{
 		$db = connect_db();
 		$result=array();
-		$sql = "select to_mobile,name,email_id from invitation where mobile='$mobile' or to_mobile='$mobile'";
+		$sql = "select to_mobile,name,email_id from invitation where mobile='$mobile'";
 		$exe = $db->query($sql);
 		$db = null;
 		$dat = $exe->fetch_all(MYSQLI_ASSOC);
